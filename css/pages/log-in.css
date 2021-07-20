@@ -1,0 +1,98 @@
+/* general sign up */
+
+h1 {
+    color: var(--brown);
+    font-size: 36px;
+    font-weight: normal;
+    padding-bottom: 20px;
+}
+
+.left-banner {
+    align-items: center;
+    background-image: url(https://res.cloudinary.com/francyzh/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1619288676/catYellow_agoykq.jpg);
+    background-size: cover;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    width: 40%;
+}
+
+.left-banner__messaje {
+    background-color: rgba(0, 0, 0, 0.2);
+    background-repeat: no-repeat;
+    color: #f5f6fa;
+    font-size: 50px;
+    padding: 15px;
+    position: relative;
+    text-align: center;
+    bottom: 15%;
+    width: 100%;
+}
+
+.user-handler {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 3% 5%;
+    width: 60%;
+}
+
+.wrapper {
+    display: flex;
+    max-width: 100%;
+}
+
+
+/* general sign up */
+
+
+/* progressbar */
+
+.progressbar {
+    display: flex;
+    justify-content: space-around;
+    margin: 5% auto;
+    width: 30%;
+}
+
+.progressbar__item {
+    background-color: #fff;
+    border-radius: 50%;
+    border: 1px solid #000;
+    height: 20px;
+    position: relative;
+    width: 20px;
+}
+
+.progressbar__item--active {
+    background-color: var(--green);
+    border: none;
+}
+
+.progressbar__item:after {
+    background: #000;
+    content: '';
+    height: 1px;
+    left: -250%;
+    position: absolute;
+    top: 9px;
+    width: 50px;
+    z-index: -1;
+}
+
+.progressbar__item--active:after {
+    background: var(--green);
+    content: '';
+    height: 2px;
+    position: absolute;
+    top: 10px;
+    width: 50px;
+    z-index: -1;
+}
+
+.progressbar__item:first-child:after {
+    content: none;
+}
+
+
+/* end progressbar */

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Perfil-Admin</title>
+    <!-- variables requerido global -->
+    <link rel="stylesheet" href="css/helpers/variables.css">
+    <!-- reset requerido global -->
+    <link rel="stylesheet" href="css/helpers/reset.css">
+    <!-- header -->
+    <link rel="stylesheet" type="text/css" href="css/components/header.css">
+    <!-- estilos propios de la pag -->
+    <link href="https://fonts.googleapis.com/css?family=Lato|Liu+Jian+Mao+Cao&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/pages/index-administrador.css">
+    <link rel="stylesheet" href="css/pages/acciones-administrador.css">
+</head>
+
+<body>
+
+    <header>
+        <input id="nav-toggle" type="checkbox">
+        <a href="home-page.html" class="logo">+Kotas</a>
+
+        <ul class="navigation">
+            <li><a href="#" id="nav-main-menu">Menú Principal</a></li>
+            <li id="nav-sign-out"><a>Cerrar Sesión</a></li>
+            <li><a href="log-in.html" id="nav-log-in">Iniciar Sesión</a></li>
+            <li><a href="sign-up.html" id="nav-sign-up">Registrarse</a></li>
+        </ul>
+
+        <div class="search" id="search">
+            <input type="text" id="input-search" value="" placeholder="Buscar">
+            <i class="fa fa-search" aria-hidden="true" id="btn-search"></i>
+        </div>
+
+        <label for="nav-toggle" class="icon-burger">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+      </label>
+    </header>
+
+
+    <main>
+
+
+    </main>
+
+
+    <!-- <section class="seccion-dos"> </section> -->
+
+    <script src="js/administrador/index-administrador.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script src="js/helpers/singleton.js"></script>
+    <script src="js/header.js"></script>
+</body>
+
+</html>

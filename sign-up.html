@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/helpers/variables.css">
+    <link rel="stylesheet" href="css/helpers/reset.css">
+    <link rel="stylesheet" href="css/components/header.css">
+    <link rel="stylesheet" href="css/components/forms.css">
+    <link rel="stylesheet" href="css/pages/sign-up.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>+Kotas</title>
+</head>
+
+<body>
+    <!DOCTYpE html>
+    <html>
+
+    <head>
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>+Kotas</title>
+        <link rel="stylesheet" tybe="text/css" href="./css/header.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+    </head>
+
+
+    <body>
+        <header>
+            <input id="nav-toggle" type="checkbox">
+            <a href="home-page.html" class="logo">+Kotas</a>
+
+            <ul class="navigation">
+                <li><a href="#" id="nav-main-menu">Menú Principal</a></li>
+                <li id="nav-sign-out"><a>Cerrar Sesión</a></li>
+                <li><a href="log-in.html" id="nav-log-in">Iniciar Sesión</a></li>
+                <li><a href="sign-up.html" id="nav-sign-up">Registrarse</a></li>
+            </ul>
+
+            <div class="search" id="search">
+                <input type="text" id="input-search" value="" placeholder="Buscar">
+                <i class="fa fa-search" aria-hidden="true" id="btn-search"></i>
+            </div>
+
+            <label for="nav-toggle" class="icon-burger">
+              <div class="line"></div>
+              <div class="line"></div>
+              <div class="line"></div>
+          </label>
+        </header>
+        <main>
+            <div class="wrapper">
+                <section class="left-banner">
+                    <h2 class="left-banner__messaje">¡+Kotas es un mundo de atenciones para los más consentidos de la casa!</h2>
+
+                </section>
+                <section class="user-handler">
+                    <h1 id="sign-up-header">Registrarse</h1>
+                    <form class="form" id="form">
+                        <div class="form__slider form__slider--active js-form-slider">
+                            <h2 class="form__slider-title">Elige un tipo de usuario</h2>
+                            <div class="choose-user-container">
+                                <div class="choose-user js-choose-user">
+                                    <img src="https://res.cloudinary.com/francyzh/image/upload/v1618986747/footer/pet_owner_mpb37t.jpg">
+                                    <p>Dueño de mascota</p>
+                                </div>
+                                <div class="choose-user js-choose-user">
+                                    <img src="https://res.cloudinary.com/francyzh/image/upload/v1619060760/proveedor8_ni6v7j.jpg">
+                                    <p>Proveedor de servicio</p>
+                                </div>
+                            </div>
+                            <div class="form__button-container">
+                                <button type="button" class="form__button js-btn-continue">
+								Continuar
+							</button>
+                                <a href="/log-in.html">¿Ya estás registrado?</a>
+                            </div>
+                        </div>
+                        <div class="form__slider js-form-slider">
+                            <div class="form__item-container">
+                                <label for="txt-nombre">Nombre completo:</label>
+                                <input type="text" name="name" class="form__item" id="txt-name">
+                            </div>
+
+                            <div class="form__item-container">
+                                <label for="slt-tipo-id">Tipo de identificación</label>
+                                <select class="form__item" name="tipo-id" id="slt-id-type">
+								<option value="">--Seleccione una opción--</option>
+								<option value="Cedula">Cédula física</option>
+                                <option value="Cedula">Cédula jurídica</option>
+								<option value="Dimex">Dimex</option>
+								<option value="Otro">Otro</option>
+							</select>
+                            </div>
+
+                            <div class="form__item-container">
+                                <label for="num-id">Número identificación:</label>
+                                <input name="id" type="number" class="form__item" id="num-id">
+                            </div>
+
+                            <div class="form__item-container">
+                                <label for="txt-correo">Correo:</label>
+                                <input name="email" type="email" class="form__item" id="txt-email" placeholder="micorreo@gmail.com">
+                            </div>
+
+                            <div class="form__item-container">
+                                <label for="slt-sexo">Género</label>
+                                <select class="form__item" name="sex" id="slt-sex">
+								<option value="">--Seleccione una opción--</option>
+								<option value="Femenino">Femenino</option>
+								<option value="Masculino">Masculino</option>
+								<option value="Otro">Otro</option>
+							</select>
+                            </div>
+
+                            <div class="form__item-container form__item-dm">
+                                <label for="txt-birthdate">Nacimiento:</label>
+                                <input name="birthdate" type="date" class="form__item" id="txt-birthdate">
+                            </div>
+
+                            <div class="form__item-container form__item-ps">
+                                <label for="txt-business-name">Nombre del negocio:</label>
+                                <input name="businessname" type="text" class="form__item" id="txt-business-name">
+                            </div>
+
+                            <div class="form__item-container">
+                                <label for="num-phone">Número Telefónico:</label>
+                                <input name="phoneNumber" type="number" class="form__item" id="num-phone">
+                            </div>
+
+                            <div class="form__button-container">
+                                <button type="button" class="form__button js-btn-continue">
+								Continuar
+							</button>
+
+                                <a href="/log-in.html">¿Ya estás registrado?</a>
+                            </div>
+                        </div>
+                        <div class="form__slider js-form-slider">
+                            <div class="form__item-container">
+                                <label for="slt-province">Provincia</label>
+                                <select class="form__item" name="province" id="slt-province">
+								<option value="">--Seleccione una provincia--</option>
+								<option value="1">San José</option>
+								<option value="2">Alajuela</option>
+								<option value="3">Cartago</option>
+								<option value="4">Heredia</option>
+								<option value="5">Guanacaste</option>
+								<option value="6">Puntarenas</option>
+								<option value="7">Limón</option>
+							</select>
+                            </div>
+
+                            <div class="form__item-container">
+                                <label for="slt-cant">Cantón</label>
+                                <select class="form__item" name="cant" id="slt-cant">
+								<option value="">--Seleccione un cantón--</option>
+							</select>
+                            </div>
+
+                            <div class="form__item-container">
+                                <label for="slt-distr">Distrito</label>
+                                <select class="form__item" name="distr" id="slt-distr">
+								<option value="">--Seleccione un distrito--</option>
+							</select>
+                            </div>
+
+                            <div class="form__item-container">
+                                <label for="txt-location">Dirección detallada</label>
+                                <textarea name="direction" class="form__item" id="txt-location" value=""></textarea>
+                            </div>
+
+                            <div class="form__button-container">
+                                <button type="button" class="form__button js-btn-continue">
+								Continuar
+							</button>
+
+                                <a href="/log-in.html">¿Ya estás registrado?</a>
+                            </div>
+                        </div>
+                        <div class="form__slider js-form-slider">
+                            <div class="form__item-cont-file">
+                                <label for="file">Añadir foto de perfil</label>
+                                <div class="js-form-preview"></div>
+                                <input type="file" name="file" id="file">
+                            </div>
+                            <div class="form__button-container">
+                                <button type="submit" class="form__button" id="submit-button">
+								Registrarse
+							</button>
+
+                                <a href="/log-in.html">¿Ya estás registrado?</a>
+                            </div>
+                        </div>
+                    </form>
+                    <ul class="progressbar">
+                        <li class="progressbar__item progressbar__item--active js-progressbar__item"></li>
+                        <li class="progressbar__item js-progressbar__item"></li>
+                        <li class="progressbar__item js-progressbar__item"></li>
+                        <li class="progressbar__item js-progressbar__item"></li>
+                    </ul>
+                </section>
+            </div>
+        </main>
+        <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+        <script src="js/helpers/generate.js"></script>
+        <script src="js/helpers/validate.js"></script>
+        <script src="js/helpers/singleton.js"></script>
+        <script src="js/header.js"></script>
+        <script src="js/login/sign-up.js"></script>
+    </body>
+
+    </html>

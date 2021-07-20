@@ -1,0 +1,790 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400&display=swap');
+:root {
+    --d: 700ms;
+    --e: cubic-bezier(0.19, 1, 0.22, 1);
+    --font-popins: 'Poppins', sans-serif;
+    --lettersColor: #fff;
+    --buttonColor: black;
+    --buttonHoverColor: #0d0d0d;
+    --borderDashed: yellow;
+    --containerColor: #ffffff;
+    --titleColor: #111;
+    --colorLetras: #fff;
+    --colorTema: #007a76;
+    --colorFondo: #000000;
+}
+
+body {
+    scroll-behavior: smooth;
+}
+
+
+/*ESTILOS - HEADER*/
+
+.header {
+    background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url(https://images.unsplash.com/photo-1593642634443-44adaa06623a?ixid=MXwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=925&q=80);
+    background-position: center;
+    background-size: cover;
+    min-height: 100vh;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    font-family: var(--font-popins);
+}
+
+.header nav {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 2% 6%;
+}
+
+.header nav svg {
+    height: 80px;
+    width: 80px;
+}
+
+.header nav .fa {
+    display: none;
+}
+
+@media (max-width: 700px) {
+    .header nav .fa {
+        color: var(--colorLetras);
+        cursor: pointer;
+        display: block;
+        font-size: 22px;
+        margin: 10px;
+    }
+}
+
+.nav-links {
+    flex-grow: 1;
+    text-align: right;
+}
+
+@media (max-width: 700px) {
+    .nav-links ul {
+        padding: 30px;
+    }
+}
+
+.nav-links li {
+    display: inline-block;
+    list-style: none;
+    padding: 8px 12px;
+    position: relative;
+}
+
+.nav-links li::after {
+    background-color: var(--colorTema);
+    content: '';
+    display: block;
+    height: 2px;
+    position: relative;
+    margin: auto;
+    transition: 0.5s;
+    width: 0%;
+}
+
+.nav-links li:hover::after {
+    width: 100%;
+}
+
+.nav-links li a {
+    color: var(--colorLetras);
+    font-size: 13px;
+    text-decoration: none;
+    /* border: 2px solid red; */
+}
+
+@media (max-width: 700px) {
+    .nav-links li {
+        display: block;
+    }
+}
+
+@media (max-width: 700px) {
+    .nav-links {
+        background: var(--colorFondo);
+        height: 100vh;
+        position: absolute;
+        right: -200px;
+        text-align: left;
+        top: 0;
+        transition: 1s left;
+        z-index: 2;
+    }
+}
+
+.text-box {
+    color: var(--colorLetras);
+    left: 50%;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+}
+
+.text-box h1 {
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-image: url(https://media.giphy.com/media/5dYqPVcoq9mKuxleyR/giphy.gif);
+    background-position: center;
+    color: transparent;
+    filter: hue-rotate(-50deg);
+    font-size: 90px;
+    text-align: center;
+    user-select: none;
+    font-weight: 600;
+}
+
+@media (max-width: 700px) {
+    .text-box h1 {
+        font-size: 50px;
+    }
+}
+
+.text-box p {
+    color: var(--colorLetras);
+    font-size: 18px;
+    margin: 10px 0 40px;
+}
+
+.text-box .header-btn {
+    background: transparent;
+    border: 1px solid var(--colorLetras);
+    color: var(--colorLetras);
+    cursor: pointer;
+    display: inline-block;
+    font-size: 18px;
+    padding: 12px 34px;
+    position: relative;
+    text-decoration: none;
+}
+
+.text-box .header-btn:hover {
+    background: #166361;
+    border: 1px solid #007a76;
+    transition: 1s;
+}
+
+
+/* FIN ESTILOS HEADER */
+
+
+/*----------------------------------------------
+------------------------------------------------
+------------------------------------------------
+------------------------------------------------
+------------------------------------------------
+------------------------------------------------*/
+
+
+/*estilos-miembros del equipo*/
+
+.container-miembros {
+    background-color: var(--containerColor);
+    background-image: url("https://res.cloudinary.com/proyects/image/upload/v1616437452/Landing%20Images/striped-brick_i7hq9d.png");
+    width: 100%;
+    padding-top: 1rem;
+    padding-bottom: 4rem;
+}
+
+.section-title {
+    align-items: center;
+    color: var(--titleColor);
+    display: flex;
+    font-weight: 400;
+    justify-content: center;
+}
+
+.team-title {
+    font-family: var(--font-popins);
+    font-size: 24px;
+    margin: 40px 0 25px 0;
+}
+
+.page-content {
+    display: grid;
+    font-family: var(--font-popins);
+    font-weight: 200;
+    grid-gap: 1.5rem;
+    margin: 0 auto;
+    max-width: 1024px;
+    padding: 1rem;
+}
+
+.page-content * {
+    box-sizing: border-box;
+}
+
+@media (min-width: 600px) {
+    .page-content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 800px) {
+    .page-content {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .page-content .card:nth-child(1) {
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+    .page-content .card:nth-child(2) {
+        grid-column-start: 3;
+        grid-column-end: 5;
+    }
+    .page-content .card:nth-child(3) {
+        grid-column-start: 2;
+        grid-column-end: 4;
+    }
+    .page-content .card:nth-child(4) {
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+    .page-content .card:nth-child(5) {
+        grid-column-start: 3;
+        grid-column-end: 5;
+    }
+}
+
+.card {
+    align-items: flex-end;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 2px 2px rgba(0, 0, 0, 0.1), 0 4px 4px rgba(0, 0, 0, 0.1), 0 8px 8px rgba(0, 0, 0, 0.1), 0 16px 16px rgba(0, 0, 0, 0.1);
+    color: var(--lettersColor);
+    display: flex;
+    overflow: hidden;
+    padding: 1rem;
+    position: relative;
+    text-align: center;
+    width: 100%;
+}
+
+@media (min-width: 600px) {
+    .card {
+        height: 350px;
+    }
+}
+
+.card:before {
+    background-position: 0 0;
+    background-size: cover;
+    content: "";
+    height: 110%;
+    left: 0;
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    transition: transform calc(var(--d) * 1.5) var(--e);
+    width: 100%;
+}
+
+.card:after {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.009) 11.7%, rgba(0, 0, 0, 0.034) 22.1%, rgba(0, 0, 0, 0.072) 31.2%, rgba(0, 0, 0, 0.123) 39.4%, rgba(0, 0, 0, 0.182) 46.6%, rgba(0, 0, 0, 0.249) 53.1%, rgba(0, 0, 0, 0.32) 58.9%, rgba(0, 0, 0, 0.394) 64.3%, rgba(0, 0, 0, 0.468) 69.3%, rgba(0, 0, 0, 0.54) 74.1%, rgba(0, 0, 0, 0.607) 78.8%, rgba(0, 0, 0, 0.668) 83.6%, rgba(0, 0, 0, 0.721) 88.7%, rgba(0, 0, 0, 0.762) 94.1%, rgba(0, 0, 0, 0.79) 100%);
+    content: "";
+    display: block;
+    height: 200%;
+    left: 0;
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    transform: translateY(-50%);
+    transition: transform calc(var(--d) * 2) var(--e);
+    width: 100%;
+}
+
+.card:nth-child(1):before {
+    background-image: url(https://res.cloudinary.com/proyects/image/upload/v1616439215/Landing%20Images/jose_bd60k8.jpg);
+    background-position: center;
+}
+
+.card:nth-child(5):before {
+    background-image: url(https://res.cloudinary.com/proyects/image/upload/v1616437326/Landing%20Images/saul_diqmdd.jpg);
+    background-position: 36%;
+}
+
+.card:nth-child(3):before {
+    background-image: url(https://res.cloudinary.com/proyects/image/upload/v1616382383/Landing%20Images/francy_vz8lns.jpg);
+}
+
+.card:nth-child(4):before {
+    background-image: url(https://res.cloudinary.com/proyects/image/upload/v1616455207/Landing%20Images/mau_aj3mal.jpg);
+    background-position: 25%;
+}
+
+.card:nth-child(2):before {
+    background-image: url(https://res.cloudinary.com/proyects/image/upload/v1616375598/Landing%20Images/Daniel_zorggg.jpg);
+    background-position: 40%;
+}
+
+.content {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    position: relative;
+    transition: transform var(--d) var(--e);
+    width: 100%;
+    z-index: 1;
+}
+
+.content .title {
+    margin-top: 2rem;
+    color: #fff;
+}
+
+.content .btn {
+    margin-top: 1rem;
+}
+
+.title {
+    font-size: 1.3rem;
+    font-weight: bold;
+    line-height: 1.2;
+}
+
+.text {
+    font-family: var(--font-popins);
+    font-style: italic;
+    font-size: 1.125rem;
+    line-height: 1.35;
+}
+
+.btn {
+    background-color: var(--buttonColor);
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 0.65rem;
+    font-weight: bold;
+    letter-spacing: 0.025rem;
+    margin-top: 1.5rem;
+    padding: 0.75rem 1.5rem;
+}
+
+.btn:hover {
+    background-color: var(--buttonHoverColor);
+}
+
+.btn:focus {
+    outline: 1px dashed var(--borderDashed);
+    outline-offset: 1px;
+}
+
+@media (min-width: 600px) {
+    .card:after {
+        transform: translateY(0);
+    }
+    .content {
+        transform: translateY(calc(100% - 4.5rem));
+    }
+    .content>*:not(.title) {
+        opacity: 0;
+        transform: translateY(1rem);
+        transition: transform var(--d) var(--e), opacity var(--d) var(--e);
+    }
+    .card:hover,
+    .card:focus-within {
+        align-items: center;
+    }
+    .card:hover:before,
+    .card:focus-within:before {
+        transform: translateY(-4%);
+    }
+    .card:hover:after,
+    .card:focus-within:after {
+        transform: translateY(-50%);
+    }
+    .card:hover .content,
+    .card:focus-within .content {
+        transform: translateY(0);
+    }
+    .card:hover .content>*:not(.title),
+    .card:focus-within .content>*:not(.title) {
+        opacity: 1;
+        transform: translateY(0);
+        transition-delay: calc(var(--d) / 8);
+    }
+    .card:focus-within:before,
+    .card:focus-within:after,
+    .card:focus-within .content,
+    .card:focus-within .content>*:not(.title) {
+        transition-duration: 0s;
+    }
+}
+
+
+/* FIN ESTILOS Miembros del equipo */
+
+
+/*----------------------------------------------
+------------------------------------------------
+------------------------------------------------
+------------------------------------------------
+------------------------------------------------
+------------------------------------------------*/
+
+
+/*estilos-ficha del equipo*/
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
+:root {
+    --colorBackground: #ffffff;
+    --letrasEnAmarillo: rgb(0, 0, 0);
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.contenedor {
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    color: #111;
+    margin-top: 20px;
+    overflow: hidden;
+    width: 100%;
+}
+
+.slider-contenedor {
+    width: 100%;
+    display: flex;
+}
+
+.contenido-slider {
+    align-items: center;
+    display: flex;
+    flex-shrink: 0;
+    height: 300px;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.contenido-slider img {
+    width: 300px;
+}
+
+.contenido-slider div {
+    width: 40%;
+}
+
+.contenido-slider .contenido {
+    font-weight: 300;
+    text-align: justify;
+    line-height: 30px;
+    margin-bottom: 34px;
+    font-size: 15px;
+}
+
+.contenido-slider .title {
+    color: #111;
+    font-weight: 500;
+    text-align: justify;
+    line-height: 30px;
+    font-size: 25px;
+    margin-bottom: -10px;
+}
+
+.contenido-slider:nth-child(even):not(:last-child) {
+    background-color: var(--colorBackground);
+    color: var(--letrasEnAmarillo);
+}
+
+@media screen and (max-width: 900px) {
+    .contenido-slider img {
+        width: 150px;
+    }
+    .contenido-slider>div {
+        width: 40%;
+    }
+    .contenido-slider h2 {
+        font-size: 14px;
+    }
+    .contenido {
+        font-weight: 300;
+        text-align: justify;
+        line-height: 30px;
+        margin-bottom: 34px;
+    }
+    .title {
+        font-weight: 500;
+        text-align: justify;
+        line-height: 30px;
+        font-size: 25px;
+        margin-bottom: 10px;
+    }
+    .contenido-slider {
+        height: 500px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .contenido-slider {
+        flex-direction: column-reverse;
+    }
+    .contenido-slider>div {
+        width: 80%;
+    }
+}
+
+
+/* FIN ESTILOS ficha del equipo*/
+
+
+/*----------------------------------------------
+------------------------------------------------
+------------------------------------------------
+------------------------------------------------
+------------------------------------------------
+------------------------------------------------*/
+
+
+/*estilos-sobre nosotros SAME AS MIEMBROS*/
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+.about-us {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.section-name {
+    font-size: 24px;
+    margin: 3rem;
+    text-align: center;
+}
+
+.content-about * {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.container-about {
+    box-sizing: border-box;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: "j j  d d " ". f  f . " "m m s s ";
+    gap: 1.5rem;
+}
+
+.container-about .card-about:nth-child(1) {
+    grid-area: j;
+}
+
+.container-about .card-about:nth-child(2) {
+    grid-area: d;
+}
+
+.container-about .card-about:nth-child(3) {
+    grid-area: f;
+}
+
+.container-about .card-about:nth-child(4) {
+    grid-area: m;
+}
+
+.container-about .card-about:nth-child(5) {
+    grid-area: s;
+}
+
+.card-about {
+    position: relative;
+    width: 600px;
+    height: 350px;
+    margin: 20px;
+    display: flex;
+    transition: .5s;
+    justify-content: flex-start;
+    align-items: center;
+    background-image: linear-gradient(to left bottom, #007a76, #0c5d6a, #214252, #222933, #141414);
+}
+
+.card-about img {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 300px;
+    transition: 0.5s;
+}
+
+.card-about:hover img {
+    left: 80%;
+    height: 350px;
+}
+
+.card-about svg {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 300px;
+    transition: 0.5s;
+}
+
+.card-about:hover svg {
+    left: 80%;
+    height: 400px;
+}
+
+.card-about .content-about {
+    position: relative;
+    width: 50%;
+    left: 20%;
+    opacity: 0;
+    visibility: hidden;
+    padding: 20px 20px 20px 40px;
+    transition: 0.5s;
+    overflow-x: hidden;
+}
+
+.card-about .content-about h2 {
+    color: #fff;
+    font-size: 2.2em;
+    line-height: 1em;
+}
+
+.card-about .content-about p {
+    margin-top: 10px;
+    color: #fff;
+}
+
+@media (max-width: 991px) {
+    .card-about .content-about {
+        width: 100%;
+        left: 0;
+        padding: 40px;
+    }
+}
+
+.card-about:hover .content-about {
+    left: 0;
+    opacity: 1;
+    visibility: visible;
+}
+
+@media (max-width: 991px) {
+    .card-about {
+        width: auto;
+        max-width: 600px;
+        align-items: flex-start;
+    }
+}
+
+@media (max-width: 991px) {
+    .card-about:hover {
+        height: 600px;
+    }
+}
+
+@media (max-width: 991px) {
+    .card-about:hover img {
+        left: 50%;
+        height: 350px;
+    }
+}
+
+@media (max-width: 767px) {
+    .container-about {
+        box-sizing: border-box;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .card-about {
+        margin: 40px 20px;
+    }
+}
+
+@media (max-width: 420px) {
+    .card-about {
+        overflow: hidden;
+    }
+    .card-about .content-about {
+        padding: 30px;
+    }
+    .container-about .card-about:hover img {
+        height: 300px;
+        left: -10%;
+    }
+}
+
+
+/* FIN ESTILOS sobre nosotros */
+
+
+/*----------------------------------------------
+------------------------------------------------
+------------------------------------------------
+------------------------------------------------
+------------------------------------------------
+------------------------------------------------*/
+
+
+/*estilos-contact*/
+
+h2 {
+    color: var(--brown);
+    font-size: 36px;
+    font-weight: normal;
+    padding-bottom: 20px;
+    padding-top: 50px;
+    text-align: center;
+}
+
+.cont-contact-us {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.cont-contact-us .form {
+    margin: 2px;
+    width: 60%;
+}
+
+.form__button-container {
+    justify-content: center;
+    padding-top: 15px;
+}
+
+
+/* FIN ESTILOS contact */
+
+
+/*----------------------------------------------
+------------------------------------------------
+------------------------------------------------
+------------------------------------------------
+------------------------------------------------
+------------------------------------------------*/
+
+
+/*estilos-footer*/
+
+.contenedor-footer {
+    display: flex;
+    justify-content: space-between;
+    line-height: 30px;
+    background: #111;
+    padding: 20px 50px;
+    font-weight: 300;
+    color: #fff;
+}
+
+.redes-sociales {
+    word-spacing: 20px;
+}
+
+
+/* FIN ESTILOS footer */

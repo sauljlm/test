@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>+Kotas/Homepage</title>
+
+    <!-- variables requerido global -->
+    <link rel="stylesheet" href="css/helpers/variables.css">
+    <!-- reset requerido global -->
+    <link rel="stylesheet" href="css/helpers/reset.css">
+    <!-- estilos home-page -->
+    <link rel="stylesheet" type="text/css" href="css/components/header.css">
+    <link rel="stylesheet" href="css/pages/home-page/home-page.css">
+    <link rel="stylesheet" type="text/css" href="css/components/forms.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@200&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+</head>
+
+<body>
+    <header>
+        <input id="nav-toggle" type="checkbox">
+        <a href="home-page.html" class="logo">+Kotas</a>
+
+        <ul class="navigation">
+            <li><a href="#" id="nav-main-menu">Menú Principal</a></li>
+            <li id="nav-sign-out"><a>Cerrar Sesión</a></li>
+            <li><a href="log-in.html" id="nav-log-in">Iniciar Sesión</a></li>
+            <li><a href="sign-up.html" id="nav-sign-up">Registrarse</a></li>
+        </ul>
+
+        <div class="search" id="search">
+            <input type="text" id="input-search" value="" placeholder="Buscar">
+            <i class="fa fa-search" aria-hidden="true" id="btn-search"></i>
+        </div>
+
+        <label for="nav-toggle" class="icon-burger">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+      </label>
+    </header>
+
+
+    <!-- inicio primera seccion -->
+    <section class="section-inicio">
+        <div class="circle"></div>
+
+        <div class="content-primera-seccion">
+            <div class="textBox">
+                <h2><span>+Kotas</span></h2>
+                <p>En nuestra aplicación tenemos lo mejor. Empezando por las mejores marcas de alimentos, y los mejores servicios para sus mascotas como por ejemplo: Grooming, Corte de pelo, Baño especializado, Corte de uñas y mucho más.</p>
+                <a href="log-in.html">Ir a la App</a>
+            </div>
+            <div class="imgBox">
+                <img src="https://res.cloudinary.com/proyects/image/upload/v1616753795/home-page/dog_xvghd7.png" class="starbucks">
+            </div>
+        </div>
+        <ul class="mini">
+            <li><img src="https://res.cloudinary.com/proyects/image/upload/v1616753787/home-page/cat-mini_gcfwfl.png" onclick="imgSlider(1); changeCircleColor('#f3bb03')"></li>
+            <li><img src="https://res.cloudinary.com/proyects/image/upload/v1616753807/home-page/food-mini_a3m4gm.png" onclick="imgSlider(2); changeCircleColor('#83B106')"></li>
+            <li><img src="https://res.cloudinary.com/proyects/image/upload/v1616753798/home-page/dog-mini_xfbr8e.png" onclick="imgSlider(3); changeCircleColor('#f3bb03')"></li>
+        </ul>
+        <ul class="media">
+            <li>
+                <a href="#"><img src="https://res.cloudinary.com/proyects/image/upload/v1616753837/home-page/facebook_tsgpn2.png"></a>
+            </li>
+            <li>
+                <a href="#"><img src="https://res.cloudinary.com/proyects/image/upload/v1616753823/home-page/instagram_hkqnzi.png"></a>
+            </li>
+            <li>
+                <a href="#"><img src="https://res.cloudinary.com/proyects/image/upload/v1616753831/home-page/twitter_smhsli.png"></a>
+            </li>
+        </ul>
+
+    </section>
+
+    <!-- Fin primera seccion -->
+
+
+
+    <!-- Tipos de servicios -->
+    <section class="ts">
+
+        <div class="container">
+            <img src="https://res.cloudinary.com/code21/image/upload/v1616798380/Hoteles_ayego2.jpg" alt="Avatar" class="image">
+            <div class="overlay">Hotelería</div>
+        </div>
+
+        <div class="container">
+            <img src="https://res.cloudinary.com/code21/image/upload/v1616798379/Peluqueria_rc5idx.jpg" alt="Avatar" class="image">
+            <div class="overlay">Belleza y Manutención</div>
+        </div>
+
+        <div class="container">
+            <img src="https://res.cloudinary.com/code21/image/upload/v1616798380/Premiacion_szpzeq.jpg" alt="Avatar" class="image">
+            <div class="overlay">Entrenamiento</div>
+        </div>
+
+        <div class="container">
+            <img src="https://res.cloudinary.com/code21/image/upload/v1616798380/Entrenamiento_me1sgs.jpg" alt="Avatar" class="image">
+            <div class="overlay">Concursos</div>
+        </div>
+
+        <div class="container">
+            <img src="https://res.cloudinary.com/code21/image/upload/v1616798380/Comida_kdnhgr.jpg" alt="Avatar" class="image">
+            <div class="overlay">Alimentación</div>
+        </div>
+
+    </section>
+    <!-- FIN tipos de servicios -->
+
+
+
+    <!-- destacados -->
+    <section class="container-miembros">
+
+        <div class='section-title'>
+            <h2 class='team-title'>Proveedores Destacados</h2>
+        </div>
+
+        <div class="page-content">
+            <div class="card">
+                <div class="content">
+                    <h2 class="title">Maria Cardenas</h2>
+                    <p class="text">Proveedora Destacada</p>
+                    <button class="btn">ver más</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="content">
+                    <h2 class="title">Marcos Perez</h2>
+                    <p class="text">Proveedor Destacado</p>
+                    <button class="btn">ver más</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="content">
+                    <h2 class="title">Julia Cardenas</h2>
+                    <p class="text">Proveedora Destacada</p>
+                    <button class="btn">ver más</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="content">
+                    <h2 class="title">Roberto Salazar</h2>
+                    <p class="text">Proveedor Destacado</p>
+                    <button class="btn">ver más</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="content">
+                    <h2 class="title">Donald Sommer</h2>
+                    <p class="text">Proveedor Destacado</p>
+                    <button class="btn">ver más</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="content">
+                    <h2 class="title">Paulina Gomez</h2>
+                    <p class="text">Proveedora Destacada</p>
+                    <button class="btn">ver más</button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!---Anuncios-->
+    <div class="contenedor">
+        <div class="slider-contenedor">
+            <section class="contenido-slider">
+                <img src="https://res.cloudinary.com/proyects/image/upload/v1617599938/home-page/grooming_x2ywdm.jpg" alt="" />
+            </section>
+
+            <section class="contenido-slider">
+                <img src="https://res.cloudinary.com/proyects/image/upload/v1617599939/home-page/cortes_gsf0vg.jpg" alt="" />
+            </section>
+
+            <section class="contenido-slider">
+                <img src="https://res.cloudinary.com/proyects/image/upload/v1617599938/home-page/domicilio_tidrrf.jpg" alt="" />
+            </section>
+
+            <section class="contenido-slider">
+                <img src="https://res.cloudinary.com/proyects/image/upload/v1617599938/home-page/grooming_x2ywdm.jpg" alt="" />
+            </section>
+
+        </div>
+        <!---Fin Anuncios-->
+
+        <section class="testimonies">
+
+            <h1>Testimonios</h1>
+
+            <!-- Testimonios -->
+            <section class="container-testimonies">
+
+                <div class="testimony testimony-1">
+                    <img class="user" src="https://res.cloudinary.com/francyzh/image/upload/v1616574097/footer/leohoho-MBYareUqq9I-unsplash_qov9qi.jpg" width="200px" alt="profile">
+                    <h2>Brenda Solís Arguedas</h2>
+                    <p>"+Kotas es la mejor opción para poder conectar con proveedores de servicios de mascotas, es fácil de utilizar y muy confiable."</p>
+                </div>
+
+                <div class="testimony testimony-2">
+                    <img class="user" src="https://images.unsplash.com/photo-1510613439354-64547973b449?ixid=MXwxMjA3fDB8MHxzZWFyY2h8OHx8Ym95JTIwYW5kJTIwZG9nfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60" width="200px" alt="profile">
+                    <h2>Diego Gamboa Sanchéz</h2>
+                    <p>"+Kotas me da todo lo que necesito para el cuidado de mis mascotas, la utilizo siempre." ¡Super recomendada!</p>
+                </div>
+                <div class="testimony testimony-3">
+                    <img class="user" src="https://res.cloudinary.com/francyzh/image/upload/v1616574096/footer/tamara-bellis-n00UuCMzVgM-unsplash_in9iry.jpg" width="150px" alt="profile">
+                    <h2>Laura Ástua Soto</h2>
+                    <p>"Contacté con mi proveedor de servicios de forma rápida y precisa, mi mascota se ve genial."</p>
+                </div>
+                <div class="testimony testimony-4">
+                    <img class="user" src="https://res.cloudinary.com/francyzh/image/upload/v1616574014/footer/yogendra-singh-K8JxScoZb4A-unsplash_js1yet.jpg" width="200px" alt="profile">
+                    <h2>Carlos Umaña Luna</h2>
+                    <div>"Mi mascota y yo estamos profundamente agradecidas con el excelente servicio de Oscar Amador, gracias +Kotas"</div>
+            </section>
+
+
+            <!-- Sobre Nosotros-->
+
+            <section class="about-us">
+                <h2 class="about-us-section-title">Acerca de Nosotros</h2>
+                <div class="about-container">
+
+                    <div class="cards-container">
+
+                        <div class="card-about">
+                            <div class="card-about-image about">
+                            </div>
+
+                            <div class="card-about-title">Sobre Nosotros</div>
+                            <div class="card-about-description">
+                                Somos una Asociación sin fines de lucro. Dedicada a brindar bienestar y amparo animal.
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="cards-container">
+
+                        <div class="card-about">
+                            <div class="card-about-image events">
+                            </div>
+
+                            <div class="card-about-title">Eventos de Salud</div>
+                            <div class="card-about-description">
+                                Contamos con una serie de eventos de vacunación, desparasitación y castraciones durante todo el año.
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="cards-container">
+
+                        <div class="card-about">
+                            <div class="card-about-image volunteers">
+                            </div>
+
+                            <div class="card-about-title">Voluntarios</div>
+                            <div class="card-about-description">
+                                Usted puede ser parte de nuestra asociación, dedicando su tiempo en colaborar en nuestros eventos de salud. Contáctenos.
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="cards-container">
+
+                        <div class="card-about">
+                            <div class="card-about-image donate">
+                            </div>
+
+                            <div class="card-about-title">Donaciones</div>
+                            <div class="card-about-description">
+                                Usted puede hacer crecer nuestra comunidad, Una pequeña donación hace posible. Ayude a fortalecer nuestros servicios para los animales más necesitados.
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="cards-container">
+
+                        <div class="card-about">
+                            <div class="card-about-image contact">
+                            </div>
+
+                            <div class="card-about-title">Contáctenos</div>
+                            <div class="card-about-description">
+                                Email: info@abaanimal.org Teléfono: (506) 8849-0592 Fax: (506) 8383-7037. Dirección: San José, Costa Rica Apdo: 4623-1000.
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+
+            </section>
+            <!-- FIN Sobre Nosotros-->
+
+            <!-- Contact us-->
+            <section class="cont-contact-us">
+                <form class="form" id="form-contact-us">
+                    <h2>Contáctenos</h2>
+                    <div class="form__item-container">
+                        <label for="txt-nombre">Nombre completo</label>
+                        <input type="text" name="name" class="form__item" id="contact-name">
+                    </div>
+                    <div class="form__item-container">
+                        <label for="contact-email">Correo electrónico</label>
+                        <input type="email" name="name" class="form__item" id="contact-email">
+                    </div>
+
+                    <div class="form__item-container">
+                        <label for="contact-message">Mensaje</label>
+                        <textarea name="message" class="form__item" id="contact-message" value=""></textarea>
+                    </div>
+
+                    <div class="form__button-container">
+                        <button type="submit" class="form__button" id="contact-submit">
+                        Enviar
+                    </button>
+                    </div>
+                </form>
+            </section>
+
+            <footer class="contenedor-footer ">
+                <div>
+                    <h3>Asociación para el Bienestar y Amparo Animal</h3>
+                    <small>&copy; Todos los derechos reservados ABBA 2021</small>
+                </div>
+                <div class="redes-sociales ">
+                    <img src="https://res.cloudinary.com/francyzh/image/upload/v1616568465/footer/facebook_j1i2eh.png" width="50px " alt="">
+                    <img src="https://res.cloudinary.com/francyzh/image/upload/v1616568458/footer/instagram_ee6vqr.png" width="50px " alt="">
+                    <img src="https://res.cloudinary.com/francyzh/image/upload/v1616568450/footer/linkedin_jlo2ex.png" width="50px " alt="">
+                    <img src="https://res.cloudinary.com/francyzh/image/upload/v1616569067/footer/github_1_fx0hvn.png" width="50px " alt="">
+                </div>
+            </footer>
+
+            </main>
+            <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+            <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+            <script src="js/helpers/singleton.js"></script>
+            <script src="js/home-page/contact-us.js"></script>
+            <script src="js/home-page/seccion-principal.js"></script>
+            <script src="js/main.js"></script>
+            <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+            <script src="js/values.js"></script>
+
+
+
+
+            <script src="js/header.js"></script>
+</body>
+
+</html>
+<script></script>
+<!--  -->
+<!--  -->

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/helpers/variables.css">
+    <link rel="stylesheet" href="css/helpers/reset.css">
+    <link rel="stylesheet" href="css/components/header.css">
+    <link rel="stylesheet" href="css/components/forms.css">
+    <link rel="stylesheet" href="css/main-forpages.css">
+    <link rel="stylesheet" href="css/pages/search-results.css">
+    <title>+Kotas</title>
+</head>
+
+<body>
+    <header>
+        <input id="nav-toggle" type="checkbox">
+        <a href="home-page.html" class="logo">+Kotas</a>
+
+        <ul class="navigation">
+            <li><a href="#" id="nav-main-menu">Menú Principal</a></li>
+            <li id="nav-sign-out"><a>Cerrar Sesión</a></li>
+            <li><a href="log-in.html" id="nav-log-in">Iniciar Sesión</a></li>
+            <li><a href="sign-up.html" id="nav-sign-up">Registrarse</a></li>
+        </ul>
+
+        <div class="search" id="search">
+            <input type="text" id="input-search" value="" placeholder="Buscar">
+            <i class="fa fa-search" aria-hidden="true" id="btn-search"></i>
+        </div>
+
+        <label for="nav-toggle" class="icon-burger">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+      </label>
+    </header>
+    <div class="wrapper">
+        <div class="dashboard">
+            <div class="header">
+                <div class="menu-circle">
+                    <img src="https://res.cloudinary.com/proyects/image/upload/v1616656961/dashboard/dog_1_y5qxvd.svg" alt="">
+                </div>
+
+                <div class="header-menu">
+                    <h1 class="resultHeader">Resultados de busqueda</h1>
+                </div>
+            </div>
+            <div class="big-container">
+                <div class="side-container">
+
+                    <form class="form">
+                        <div class="form__item-container">
+                            <label for="slt-search">Tipo de busqueda</label>
+                            <select class="form__item" name="search-type" id="slt-search">
+                                        <option value="name">Nombre</option>
+                                        <option value="serviceType">Tipo de servicio</option>
+                                        <option value="location">Ubicación</option>
+                                    </select>
+                        </div>
+
+                        <div class="form__item-container js-item-service-type">
+                            <label for="slt-service">Tipo de servicio:</label>
+                            <select class="form__item" name="sevicetype" id="slt-service">
+                                        <option value="">--Seleccione una opción--</option>
+                                        <option value="grooming">Grooming</option>
+                                        <option value="walk">Paseos</option>
+                                        <option value="food">Alimento</option>
+                                        <option value="take-care">Cuido de mascotas</option>
+                                    </select>
+                        </div>
+
+                        <div class="form__item-container js-item-province">
+                            <label for="slt-province">Provincia</label>
+                            <select class="form__item" name="province" id="slt-province">
+                                        <option value="">--Seleccione una provincia--</option>
+                                        <option value="1">San José</option>
+                                        <option value="2">Alajuela</option>
+                                        <option value="3">Cartago</option>
+                                        <option value="4">Heredia</option>
+                                        <option value="5">Guanacaste</option>
+                                        <option value="6">Puntarenas</option>
+                                        <option value="7">Limón</option>
+                                    </select>
+                        </div>
+
+                        <div class="form__item-container js-item-cant">
+                            <label for="slt-cant">Cantón</label>
+                            <select class="form__item" name="cant" id="slt-cant">
+                                        <option value="">--Seleccione un cantón--</option>
+                                    </select>
+                        </div>
+                    </form>
+                </div>
+                <div class="container-cont">
+                    <section class="results-container">
+                        <ul class="results js-results"></ul>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script src="js/helpers/singleton.js"></script>
+    <script src="js/helpers/generate.js"></script>
+    <script src="js/header.js"></script>
+    <script src="js/search-results/search-results.js"></script>
+</body>
+
+</html>

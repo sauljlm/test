@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/helpers/variables.css">
+    <link rel="stylesheet" href="css/helpers/reset.css">
+    <link rel="stylesheet" href="css/components/header.css">
+    <link rel="stylesheet" href="css/components/form.css">
+    <link rel="stylesheet" href="css/pages/registro-mascotas.css">
+    <title>+Kotas</title>
+</head>
+
+<body>
+    <header>
+        <input id="nav-toggle" type="checkbox">
+        <a href="home-page.html" class="logo">+Kotas</a>
+
+        <ul class="navigation">
+            <li><a href="#" id="nav-main-menu">Menú Principal</a></li>
+            <li id="nav-sign-out"><a>Cerrar Sesión</a></li>
+            <li><a href="log-in.html" id="nav-log-in">Iniciar Sesión</a></li>
+            <li><a href="sign-up.html" id="nav-sign-up">Registrarse</a></li>
+        </ul>
+
+        <div class="search" id="search">
+            <input type="text" id="input-search" value="" placeholder="Buscar">
+            <i class="fa fa-search" aria-hidden="true" id="btn-search"></i>
+        </div>
+
+        <label for="nav-toggle" class="icon-burger">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+      </label>
+    </header>
+
+
+    <div class="wrappers">
+        <section class="left-banners">
+            <div>
+                <img class="content-wrapper-img" src="https://res.cloudinary.com/proyects/image/upload/v1618355034/dashboard/animation_500_knglo4me_amsorz.gif" id="pet-photo" alt="">
+            </div>
+            <div class="image">
+                <button type="button" id="btn-foto">
+                        Agregar Imagen
+                    </button>
+            </div>
+        </section>
+        <section class="user-handlers">
+            <form class="forms" id="forms">
+                <h1>Registrar Mascota</h1>
+                <div class="forms__item-container">
+                    <label for="slt-tipo">Tipo de Mascota:</label>
+                    <select id="slt-tipo">
+                            <option value="" selected disabled>---Seleccione---</option>
+                            
+                        </select>
+                </div>
+
+                <div class="forms__item-container">
+                    <label for="text">Nombre de la Mascota:</label>
+                    <input type="text" name="text" class="form__item" id="registro-nombre">
+                </div>
+
+
+                <div class="forms__item-container">
+                    <label for="number">Edad:</label>
+                    <input type="number" name="text" class="form__item" id="registro-edad">
+                </div>
+
+
+                <div class="forms__item-container">
+                    <label for="slt-raza">Raza:</label>
+                    <select id="slt-raza" required>
+                            <option value="">---Seleccione---</option>
+                            <option value="Pug">Pug</option>
+                            <option value="Pastor Aleman">Pastor Alemán</option>
+                            <option value="Bulldog">Bulldog</option>
+                            <option value="Poodle">Poodle</option>
+                            <option value="Labrador">Labrador</option>
+                            <option value="Gran Danes">Gran Danés</option>
+                            <option value="Pomerania">Pomerania</option>
+                            <option value="Persa">Persa</option>
+                            <option value="Savannah">Savannah</option>
+                            <option value="Singapura">Singapura</option>
+                            <option value="Belier Holandes">Belier Holandés</option>
+                            <option value="Cabeza de León">Savannah</option>
+                        </select>
+
+                </div>
+
+                <div class="catalog-container">
+
+                    <div class="forms__item-container">
+                        <h2>Padecimientos:</h2>
+                        <div class="contenedorP">
+                            <div id='wrapper-ailments'>
+                                <select id="slt-padecimientos">
+                                <option value="">---Seleccione---</option>
+                                <option value="Moquillo">Moquillo</option>
+                                <option value="Hepatitis Canina">Hepatitis Canina</option>
+                                <option value="Rabia">Rabia</option>
+                                <option value="Parvovirus">Parvovirus</option>
+                                <option value="Distemper">Distemper</option>
+                                <option value="Leptostirosis">Leptostirosis</option>
+                                     </select>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <button type="button" class="btn" id="btn-padecimientos">
+                            <svg height="469.33333pt" viewBox="0 0 469.33333 469.33333" width="469.33333pt" xmlns="http://www.w3.org/2000/svg"><path d="m437.332031 192h-160v-160c0-17.664062-14.335937-32-32-32h-21.332031c-17.664062 0-32 14.335938-32 32v160h-160c-17.664062 0-32 14.335938-32 32v21.332031c0 17.664063 14.335938 32 32 32h160v160c0 17.664063 14.335938 32 32 32h21.332031c17.664063 0 32-14.335937 32-32v-160h160c17.664063 0 32-14.335937 32-32v-21.332031c0-17.664062-14.335937-32-32-32zm0 0"/></svg>
+                         </button>
+
+                    <div class="forms__item-container">
+                        <!-- <label for="slt-vacunas">Vacunas:</label> -->
+                        <h2>Vacunas:</h2>
+                        <div class="contenedorV">
+                            <div class="sub-contenedor" id="wrapper-vaccines">
+
+                                <select id="slt-vacunas">
+                                    <option value="">---Seleccione---</option>
+                                    <option value="Contra el Parvovirus">Contra el Parvovirus</option>
+                                    <option value="Contra la Rabia">Contra la Rabia</option>
+                                    <option value="Contra el distemper">Contra el Distemper</option>
+                                    <option value="Contra la leptostirosis">Contra la Leptostirosis</option>
+                                    <option value="Contra el Moquillo">Contra el Moquillo</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button type="button" class="btn" id="btn-vacunas">
+                            <svg height="469.33333pt" viewBox="0 0 469.33333 469.33333" width="469.33333pt" xmlns="http://www.w3.org/2000/svg"><path d="m437.332031 192h-160v-160c0-17.664062-14.335937-32-32-32h-21.332031c-17.664062 0-32 14.335938-32 32v160h-160c-17.664062 0-32 14.335938-32 32v21.332031c0 17.664063 14.335938 32 32 32h160v160c0 17.664063 14.335938 32 32 32h21.332031c17.664063 0 32-14.335937 32-32v-160h160c17.664063 0 32-14.335937 32-32v-21.332031c0-17.664062-14.335937-32-32-32zm0 0"/></svg></button>
+
+
+                </div>
+
+
+                <div class="forms__button-container">
+
+                </div>
+
+                <button type="button" class="forms__button" id="btn-agregar">
+                        Agregar
+                     </button></form>
+        </section>
+    </div>
+
+
+    <script src="https://widget.cloudinary.com/v2.0/global/all.js" type="text/javascript"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js "></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+
+    <script src="js/registro-mascota/registro-mascota.js"></script>
+    <script src="js/registro-mascota/servicios-mascota.js"></script>
+    <script src="js/registro-mascota/servicio-imagenes.js"></script>
+
+</body>
+
+</html>

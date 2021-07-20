@@ -1,0 +1,565 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+:root {
+    --colorLetrasTraserasTarjeta: rgb(0, 0, 0);
+    --theme-bg-color: rgb(255 255 255 / 31%);
+    --theme-card-color: rgb(255 255 255 / 31%);
+    --theme-color: #3c3a3a;
+    --inactive-color: #333333;
+    --button-inactive: #3c3a3a;
+    --dropdown-bg: #f7f7f7;
+    --overlay-bg: rgb(255 255 255 / 30%);
+    --dropdown-hover: rgb(236 236 236);
+    --border-color: rgb(255 255 255 / 35%);
+    --hover-menu-bg: rgba(255 255 255 / 35%);
+    --linkHover: rgb(230, 230, 230);
+    --linkColor: #000;
+    --linkBg: #f7f7f7;
+    --backgroundTheme: #fff;
+    --boxShadow: rgba(90, 116, 148, 0.3);
+    --cardLegendsColor: rgb(255, 255, 255);
+    --magneticCardColor: rgb(255, 255, 255);
+    --signatureColor: #000;
+    --labelCard: #ffffff;
+    --ccvLetters: rgb(0, 0, 0);
+    --ccvBackground: rgb(255, 255, 255);
+    --backLinkColor: #fff;
+    --buttonColor: #83B106;
+    --buttonHoverColor: #9cd10a;
+    --buttonShadow: #698f01;
+    --buttonLetterColor: #fff;
+    --errorBorder: rgb(182, 23, 23);
+    --successBorder: #83B106;
+    --inputSelectHover: #93BDED;
+    --inputSelectBorder: #CED6E0;
+    --iconsColor: #fff;
+    --errorContainerColor: rgb(128, 24, 24);
+    --errorContainerText: #fff;
+    --outline: rgb(4, 4, 4);
+    --boxShadow2: rgba(90, 116, 148, 0.3);
+    --selectArrow: #CED6E0;
+}
+
+body {
+    background-color: var(--backgroundTheme);
+    font-family: 'Poppins', sans-serif;
+}
+
+.contenedor * {
+    box-sizing: border-box;
+}
+
+.contenedor {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    max-width: 1000px;
+    padding: 40px 20px;
+    width: 90%;
+}
+
+
+/* ---------- Estilos Generales de las Tarjetas ----------*/
+
+.tarjeta {
+    color: var(--colorLetrasTraserasTarjeta);
+    cursor: pointer;
+    max-width: 550px;
+    position: relative;
+    transform-style: preserve-3d;
+    transform: rotateY(0deg);
+    transition: .3s ease all;
+    width: 100%;
+    z-index: 2;
+    background-color: #668b01;
+    border-radius: 15px;
+}
+
+.tarjeta.active {
+    transform: rotateY(180deg);
+}
+
+.tarjeta>div {
+    border-radius: 15px;
+    box-shadow: 0 10px 10px 0 var(--boxShadow);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 315px;
+    padding: 30px;
+}
+
+
+/* ---------- Tarjeta Delantera ----------*/
+
+.tarjeta .delantera {
+    background: url(../../img/card-config/bg-tarjeta/dog-transparent.png) var(--theme-card-color);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    max-height: 200px;
+    backface-visibility: hidden;
+}
+
+.delantera .logo-marca {
+    position: relative;
+    min-height: 50px;
+    text-align: right;
+}
+
+.delantera .logo-marca img {
+    top: 10px;
+    right: 40px;
+    position: fixed;
+    height: 100px;
+    object-fit: cover;
+    width: 100px;
+}
+
+.delantera .chip {
+    top: 90px;
+    position: fixed;
+    margin-bottom: 20px;
+    max-width: 50px;
+    width: 100%;
+}
+
+.delantera .grupo .label {
+    color: var(--theme-color);
+    font-size: 16px;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+
+.delantera .grupo .numero,
+.delantera .grupo .nombre,
+.delantera .grupo .expiracion {
+    color: var(--cardLegendsColor);
+    font-size: 22px;
+    text-transform: uppercase;
+}
+
+.delantera .flexbox {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+
+/* ---------- Tarjeta Trasera ----------*/
+
+.trasera {
+    background: url(../../img/card-config/bg-tarjeta/back-dog.png) var(--theme-bg-color);
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+}
+
+.trasera .barra-magnetica {
+    background: var(--magneticCardColor);
+    height: 40px;
+    left: 0;
+    position: absolute;
+    top: 30px;
+    width: 100%;
+}
+
+.trasera .datos {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 60px;
+}
+
+.trasera .datos p {
+    margin-bottom: 5px;
+}
+
+.trasera .datos #firma {
+    width: 70%;
+}
+
+.trasera .datos #firma .firma {
+    background: repeating-linear-gradient(skyblue 0, skyblue 5px, orange 5px, orange 10px);
+    height: 40px;
+}
+
+.trasera .datos #firma .firma p {
+    color: var(--signatureColor);
+    font-family: 'Liu Jian Mao Cao', cursive !important;
+    font-size: 30px;
+    line-height: 40px;
+    padding: 0 10px;
+    text-transform: capitalize;
+}
+
+.trasera .datos #ccv {
+    width: 20%;
+}
+
+.trasera .datos #ccv .ccv {
+    background: var(--ccvBackground);
+    height: 40px;
+    color: var(--ccvLetters);
+    padding: 10px;
+    text-align: center;
+}
+
+.trasera .leyenda {
+    font-size: 14px;
+    line-height: 24px;
+    color: var(--colorLetrasTraserasTarjeta)
+}
+
+.trasera .link-banco {
+    color: var(--backLinkColor);
+    font-size: 14px;
+}
+
+
+/* ---------- Contenedor Boton ----------*/
+
+.contenedor-btn .btn-abrir-formulario {
+    background: var(--buttonColor);
+    border-radius: 100%;
+    border: none;
+    box-shadow: -5px 4px 8px var(--buttonShadow);
+    color: var(--iconsColor);
+    cursor: pointer;
+    font-size: 20px;
+    height: 50px;
+    line-height: 20px;
+    outline: none;
+    padding: 5px;
+    position: relative;
+    top: -25px;
+    transition: all .2s ease;
+    width: 50px;
+    z-index: 3;
+}
+
+.contenedor-btn .btn-abrir-formulario:hover {
+    background: var(--buttonHoverColor);
+}
+
+.contenedor-btn .btn-abrir-formulario.active {
+    transform: rotate(45deg);
+}
+
+
+/* ---------- Formulario Tarjeta ----------*/
+
+.formulario-tarjeta {
+    backdrop-filter: blur(20px);
+    background-color: var(--theme-bg-color);
+    border-radius: 10px;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    max-width: 700px;
+    padding: 150px 30px 30px 30px;
+    position: relative;
+    top: -150px;
+    transition: clip-path .3s ease-out;
+    width: 100%;
+    z-index: 1;
+    background: #ffffff;
+    border: 2px solid var(--inputSelectBorder);
+}
+
+.formulario-tarjeta.active {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.formulario-tarjeta label {
+    color: var(--labelCard);
+    display: block;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.formulario-tarjeta input,
+.formulario-tarjeta select,
+.btn-enviar {
+    background: var(--hover-menu-bg);
+    border-radius: 5px;
+    border: 2px solid var(--inputSelectBorder);
+    font-size: 18px;
+    height: 50px;
+    padding: 5px 12px;
+    transition: .3s ease all;
+    width: 100%;
+}
+
+.formulario-tarjeta .form-error {
+    color: var(--errorBorder);
+    display: none;
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 0;
+    padding-bottom: 10px;
+    padding-top: 0px;
+    user-select: none;
+}
+
+.formulario-tarjeta .form-error.active {
+    display: block;
+}
+
+.formulario-tarjeta input.active {
+    border: 1px solid var(--successBorder);
+}
+
+.formulario-tarjeta input.inactive {
+    border: 2px solid var(--errorBorder);
+}
+
+.formulario-tarjeta select.active {
+    border: 1px solid var(--successBorder);
+}
+
+.formulario-tarjeta select.inactive {
+    border: 2px solid var(--errorBorder);
+}
+
+.formulario-tarjeta input:hover,
+.formulario-tarjeta select:hover {
+    border: 2px solid var(--inputSelectHover);
+}
+
+.formulario-tarjeta input:focus,
+.formulario-tarjeta select:focus {
+    box-shadow: 1px 7px 10px -5px var(--boxShadow2);
+    outline: var(--outline);
+}
+
+.formulario-tarjeta input {
+    margin-bottom: 20px;
+    /* text-transform: uppercase; */
+}
+
+.formulario-tarjeta .flexbox {
+    display: flex;
+    justify-content: space-between;
+}
+
+.formulario-tarjeta .expira {
+    width: 100%;
+}
+
+.formulario-tarjeta .ccv {
+    min-width: 100px;
+}
+
+.formulario-tarjeta .grupo-select {
+    margin-right: 15px;
+    position: relative;
+    width: 100%;
+}
+
+.formulario-tarjeta select {
+    -webkit-appearance: none;
+}
+
+.formulario-tarjeta .grupo-select svg {
+    color: var(--selectArrow);
+    position: absolute;
+    right: 15px;
+    top: 20px;
+    transition: .3s ease all;
+}
+
+.formulario-tarjeta .grupo-select:hover i {
+    color: var(--inputSelectHover);
+}
+
+
+/* !facturacion */
+
+.formulario-tarjeta .name {
+    width: 100%;
+}
+
+.formulario-mensaje {
+    background: var(--errorContainerColor);
+    border-radius: 3px;
+    display: none;
+    height: 45px;
+    line-height: 45px;
+    margin-bottom: 20px;
+    padding: 0 15px;
+}
+
+.formulario-mensaje p {
+    color: var(--errorContainerText);
+}
+
+.formulario-mensaje p i {
+    color: var(--iconsColor);
+    margin-right: 10px;
+}
+
+.formulario-mensaje.active {
+    display: block;
+}
+
+.formulario-tarjeta .btn-enviar {
+    background: var(--buttonColor);
+    border: none;
+    box-shadow: 2px 2px 10px 0px var(--buttonShadow);
+    color: var(--buttonLetterColor);
+    cursor: pointer;
+    font-size: 22px;
+    padding: 10px;
+}
+
+.formulario-tarjeta .btn-enviar:hover {
+    background: var(--buttonHoverColor);
+}
+
+
+/* select */
+
+a {
+    text-decoration: none;
+}
+
+.contenedor-select {
+    width: 95%;
+    max-width: 1000px;
+    padding: 10px 0;
+}
+
+.selectbox {
+    width: 100%;
+    margin: auto;
+    position: relative;
+}
+
+.select {
+    background: var(--hover-menu-bg);
+    width: 100%;
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, .16);
+    border-radius: 10px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: .2s ease all;
+    margin-bottom: 30px;
+    padding: 5px;
+    position: relative;
+    z-index: 200;
+    border: 2px solid #e6e8e9;
+}
+
+.select.active,
+.select:hover {
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, .16);
+    border: 2px solid #CED6E0;
+}
+
+.select.active:before {
+    content: "";
+    display: block;
+    height: 0;
+    width: 0;
+    border-top: 15px solid #c2c3c4;
+    border-right: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-left: 15px solid transparent;
+    position: absolute;
+    bottom: -30px;
+    left: calc(50% - 15px);
+}
+
+.select i {
+    font-size: 30px;
+    margin-left: 40px;
+    color: #CED6E0;
+}
+
+.titulo {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: var(--theme-color);
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.opciones {
+    border-radius: 10px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, .16);
+    max-height: 200px;
+    overflow: auto;
+    z-index: 100;
+    width: 100%;
+    display: none;
+    backdrop-filter: blur(30px);
+}
+
+.opciones.active {
+    display: block;
+    animation: fadeIn .3s forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        transform: translateY(-200px) scale(.5);
+    }
+    to {
+        transform: translateY(0) scale(1);
+    }
+}
+
+.contenido-opcion {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    transition: .2s ease all;
+    user-select: none;
+}
+
+.opciones .contenido-opcion {
+    padding: 10px;
+}
+
+.contenido-opcion .imgTipo {
+    width: 60px;
+    height: 50px;
+    margin-right: 30px;
+    object-fit: cover;
+}
+
+.opciones .contenido-opcion:hover {
+    background: var(--theme-bg-color);
+}
+
+.opciones .contenido-opcion:hover .titulo {
+    color: var(--theme-color);
+}
+
+@media screen and (max-width: 800px) {
+    .selectbox {
+        width: 100%;
+    }
+    .selectbox i {
+        position: absolute;
+        right: 10px;
+    }
+}
+
+
+/* select */
+
+@media screen and (min-width: 621px) and (max-width: 1179px) {
+    .contenedor {
+        margin-top: 30px;
+    }
+}
+
+@media(min-width:1179px) {
+    .contenedor {
+        margin-top: 30px;
+    }
+}

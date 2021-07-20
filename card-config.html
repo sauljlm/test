@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- variables requerido global -->
+    <link rel="stylesheet" href="css/helpers/variables.css">
+    <!-- reset requerido global -->
+    <link rel="stylesheet" href="css/helpers/reset.css">
+    <!-- estilos home-page -->
+    <link rel="stylesheet" href="css/main-forpages.css">
+    <link rel="stylesheet" href="css/components/header.css">
+    <link rel="stylesheet" href="css/pages/card-config.css">
+    <title>Dashboard-Admin</title>
+</head>
+
+<body>
+    <header>
+        <input id="nav-toggle" type="checkbox">
+        <a href="home-page.html" class="logo">+Kotas</a>
+
+        <ul class="navigation">
+            <li><a href="#" id="nav-main-menu">Menú Principal</a></li>
+            <li id="nav-sign-out"><a>Cerrar Sesión</a></li>
+            <li><a href="log-in.html" id="nav-log-in">Iniciar Sesión</a></li>
+            <li><a href="sign-up.html" id="nav-sign-up">Registrarse</a></li>
+        </ul>
+
+        <div class="search" id="search">
+            <input type="text" id="input-search" value="" placeholder="Buscar">
+            <i class="fa fa-search" aria-hidden="true" id="btn-search"></i>
+        </div>
+
+        <label for="nav-toggle" class="icon-burger">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+      </label>
+    </header>
+    <div class="dashboard">
+
+        <div class="header">
+            <div class="menu-circle">
+                <img src="https://res.cloudinary.com/proyects/image/upload/v1616656961/dashboard/dog_1_y5qxvd.svg" alt="">
+            </div>
+
+            <div class="header-menu">
+                <a class="menu-link active" href="#">Menú Principal</a>
+            </div>
+
+            <div class="header-profile">
+
+
+                <img class="profile-img" src="https://images.unsplash.com/photo-1600353068440-6361ef3a86e8?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" alt="">
+
+            </div>
+
+        </div>
+
+
+        <div class="big-container">
+
+            <div class="side-container">
+
+
+
+
+            </div>
+
+
+            <div class="main-container">
+
+                <div class="content-wrapper">
+                    <div class="content-wrapper-header admin">
+                        <div class="content-wrapper-context">
+
+                            <h3 class="img-content">
+                                <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+           <circle style="fill:#FFE570;" cx="256" cy="256" r="256"/>
+           <path style="fill:#FDB500;" d="M511.75,266.987L384.701,139.938c0,0-1.075,1.218-2.553,3.285l-81.315-82.557
+             c0,0-17.892,20.213-12.238,38.683c-8.278,4.784-15.102,14.285-19.164,26.425l-60.516-61.168c0,0-17.892,20.213-12.238,38.683
+             c-13.554,7.832-23.223,28.299-23.223,52.315c0,20.653,7.153,38.672,17.775,48.297l24.473,24.44c-1.082,0.408-2.162,0.833-3.241,1.27
+             l-85.163-85.733c0,0-15.009,16.956-10.266,32.45c-11.37,6.571-19.481,23.739-19.481,43.885c0,16.175,5.231,30.421,13.177,38.812
+             l29.105,29.118c-9.367,13.184-17.132,27.952-22.666,44.015c-10.473,30.398-2.745,53.955,13.45,68.253l111.19,111.19
+             c4.7,0.258,9.43,0.399,14.193,0.399C393.702,512,505.993,403.273,511.75,266.987z"/>
+           <g>
+             <path style="fill:#CE7937;" d="M399.725,332.159c-23.205-67.351-85.553-112.012-141.277-112.012s-118.076,44.66-141.281,112.012
+               c-23.078,66.982,42.215,100.754,91.748,75.425c19.966-10.21,30.955-28.988,49.531-28.988s29.565,18.778,49.531,28.988
+               C357.51,432.913,422.803,399.141,399.725,332.159z"/>
+             <path style="fill:#CE7937;" d="M307.98,407.58c-19.97-10.21-30.96-28.98-49.53-28.98c-0.83,0-1.65,0.04-2.45,0.11V220.18
+               c0.82-0.02,1.64-0.03,2.45-0.03c55.72,0,118.07,44.66,141.28,112.01C422.8,399.14,357.51,432.91,307.98,407.58z"/>
+             <path style="fill:#CE7937;" d="M137.565,176.328c4.743-15.494-10.266-32.45-10.266-32.45s-15.009,16.956-10.266,32.45
+               c-11.37,6.57-19.481,23.739-19.481,43.885c0,25.817,13.318,46.746,29.747,46.746s29.747-20.929,29.747-46.746
+               C157.046,200.067,148.935,182.899,137.565,176.328z"/>
+             <path style="fill:#CE7937;" d="M221.154,103.29c5.654-18.47-12.238-38.683-12.238-38.683s-17.892,20.213-12.238,38.683
+               c-13.554,7.832-23.223,28.299-23.223,52.315c0,30.776,15.876,55.724,35.461,55.724s35.461-24.949,35.461-55.724
+               C244.376,131.588,234.707,111.122,221.154,103.29z"/>
+             <path style="fill:#CE7937;" d="M374.435,172.388c-4.743-15.494,10.266-32.45,10.266-32.45s15.009,16.956,10.266,32.45
+               c11.37,6.57,19.481,23.739,19.481,43.885c0,25.817-13.318,46.746-29.747,46.746c-16.429,0-29.747-20.929-29.747-46.746
+               C354.954,196.127,363.065,178.958,374.435,172.388z"/>
+             <path style="fill:#CE7937;" d="M288.595,99.35c-5.654-18.47,12.238-38.683,12.238-38.683s17.892,20.213,12.238,38.683
+               c13.554,7.832,23.223,28.299,23.223,52.315c0,30.776-15.876,55.724-35.461,55.724s-35.461-24.949-35.461-55.724
+               C265.372,127.648,275.041,107.182,288.595,99.35z"/>
+           </g>
+           <g>
+           </g>
+           <g>
+           </g>
+           <g>
+           </g>
+           <g>
+           </g>
+           <g>
+           </g>
+           <g>
+           </g>
+           <g>
+           </g>
+           <g>
+           </g>
+           <g>
+           </g>
+           <g>
+           </g>
+           <g>
+           </g>
+           <g>
+           </g>
+           <g>
+           </g>
+           <g>
+           </g>
+           <g>
+           </g>
+           </svg>
+                            </h3>
+
+                            <div class="content-text"></div>
+                        </div>
+
+                        <img class="content-wrapper-img" src="https://res.cloudinary.com/proyects/image/upload/v1618635056/cat_yommxy.gif" alt="">
+
+                    </div>
+
+                    <div class="content-section">
+                        <div class="content-section-title"></div>
+                        <div class="apps-card">
+
+                            <div class="app-card admin">
+                                <img class="profile-img" src="" alt="" id="card-img1">
+                                <span id="card-name1">
+                 
+                </span>
+
+                                <div class="app-card__subtext" id="card-text1"></div>
+
+
+                                <div class="app-card-buttons">
+                                    <button class="content-button status-button" id="card-button1">Ir</button>
+                                </div>
+
+                            </div>
+
+                            <div class="app-card admin">
+                                <img class="profile-img" src="" alt="" id="card-img2">
+                                <span id="card-name2">
+                </span>
+
+                                <div class="app-card__subtext" id="card-text2"></div>
+
+                                <div class="app-card-buttons">
+                                    <button class="content-button status-button" id="card-button2">Ir</button>
+                                </div>
+
+                            </div>
+
+
+                            <div class="app-card admin">
+                                <img class="profile-img" src="" alt="" id="card-img3">
+                                <span id="card-name3">
+                </span>
+                                <div class="app-card__subtext" id="card-text3"></div>
+                                <div class="app-card-buttons">
+                                    <button class="content-button status-button" id="card-button3">Ir</button>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- inserte su codigo de aqui------------------------------------------------------------------ -->
+
+                    <div class="contenedor">
+
+                        <!-- Tarjeta -->
+                        <section class="tarjeta" id="tarjeta">
+                            <div class="delantera">
+                                <div class="logo-marca" id="logo-marca">
+
+                                </div>
+                                <img src="https://res.cloudinary.com/proyects/image/upload/v1616376668/card-config/logos/chip-tarjeta_tbphal.png" class="chip" alt="">
+                                <div class="datos">
+                                    <div class="grupo" id="numero">
+                                        <p class="label">Número Tarjeta</p>
+                                        <p class="numero">#### #### #### ####</p>
+                                    </div>
+                                    <div class="flexbox">
+                                        <div class="grupo" id="nombre">
+                                            <p class="label">Nombre en Tarjeta</p>
+                                            <p class="nombre">Mascotas</p>
+                                        </div>
+
+                                        <div class="grupo" id="expiracion">
+                                            <p class="label">Expiración</p>
+                                            <p class="expiracion"><span class="mes">MM</span> / <span class="year">AA</span></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="trasera">
+                                <div class="barra-magnetica"></div>
+                                <div class="datos">
+                                    <div class="grupo" id="firma">
+                                        <p class="label">Firma</p>
+                                        <div class="firma">
+                                            <p></p>
+                                        </div>
+                                    </div>
+                                    <div class="grupo" id="ccv">
+                                        <p class="label">CCV</p>
+                                        <p class="ccv"></p>
+                                    </div>
+                                </div>
+                                <p class="leyenda">Tu información siempre estará segura. En nuestra tienda de servicios para mascotas
+                                </p>
+                                <a href="#" class="link-banco">www.+kotas.com</a>
+                            </div>
+                        </section>
+
+                        <!-- Contenedor Boton Abrir Formulario -->
+                        <div class="contenedor-btn">
+                            <button class="btn-abrir-formulario" id="btn-abrir-formulario">
+            <svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <path d="M0 0L24 0L24 24L0 24L0 0Z" id="path_1" />
+                  <clipPath id="mask_1">
+                    <use xlink:href="#path_1" />
+                  </clipPath>
+                </defs>
+                <g id="icons8-más-(1)">
+                  <path d="M0 0L24 0L24 24L0 24L0 0Z" id="Background" fill="none" fill-rule="evenodd" stroke="none" />
+                  <g clip-path="url(#mask_1)">
+                    <path d="M9 0L9 9L0 9L0 11L9 11L9 20L11 20L11 11L20 11L20 9L11 9L11 0L9 0Z" transform="translate(2 2)" id="Shape" fill="#FFFFFF" fill-rule="evenodd" stroke="none" />
+                  </g>
+                </g>
+              </svg>
+        </button>
+                        </div>
+
+                        <!-- Formulario -->
+                        <form action="" id="formulario-tarjeta" class="formulario-tarjeta">
+
+                            <div class="grupo numero">
+                                <label for="inputNumero">Número Tarjeta</label>
+                                <input type="text" id="inputNumero" name="numero" placeholder="Número de tarjeta" maxlength="19" autocomplete="off">
+                                <p class="form-error">La tarjeta tiene que tener 16 digitos.</p>
+                            </div>
+
+                            <div class="grupo nombre">
+                                <label for="inputNombre">Nombre</label>
+                                <input type="text" id="inputNombre" name="nombre" placeholder="Nombre en tarjeta" maxlength="25" autocomplete="off">
+                                <p class="form-error">El nombre tiene que ser válido.</p>
+                            </div>
+
+                            <div class="flexbox">
+                                <div class="grupo expira">
+                                    <label for="selectMes">Expiración</label>
+                                    <div class="flexbox">
+                                        <div class="grupo-select">
+                                            <select name="mes" id="selectMes">
+                            <option disabled selected>Mes</option>
+                        </select>
+                                            <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="10.847px" height="10.847px" viewBox="0 0 451.847 551.847" style="enable-background:new 0 0 451.847 451.847;" xml:space="preserve">
+                            <g>
+                                <path d="M225.923,354.706c-8.098,0-16.195-3.092-22.369-9.263L9.27,151.157c-12.359-12.359-12.359-32.397,0-44.751
+                                    c12.354-12.354,32.388-12.354,44.748,0l171.905,171.915l171.906-171.909c12.359-12.354,32.391-12.354,44.744,0
+                                    c12.365,12.354,12.365,32.392,0,44.751L248.292,345.449C242.115,351.621,234.018,354.706,225.923,354.706z"/>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            </svg>
+                                            <p class="form-error">El mes tiene que ser válido.</p>
+                                        </div>
+                                        <div class="grupo-select">
+                                            <select name="year" id="selectYear">
+                            <option disabled selected>Año</option>
+                        </select>
+                                            <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="10.847px" height="10.847px" viewBox="0 0 451.847 551.847" style="enable-background:new 0 0 451.847 451.847;" xml:space="preserve">
+                            <g>
+                                <path d="M225.923,354.706c-8.098,0-16.195-3.092-22.369-9.263L9.27,151.157c-12.359-12.359-12.359-32.397,0-44.751
+                                    c12.354-12.354,32.388-12.354,44.748,0l171.905,171.915l171.906-171.909c12.359-12.354,32.391-12.354,44.744,0
+                                    c12.365,12.354,12.365,32.392,0,44.751L248.292,345.449C242.115,351.621,234.018,354.706,225.923,354.706z"/>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            </svg>
+                                            <p class="form-error">El año tiene que ser válido.</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="grupo ccv">
+                                    <label for="inputCCV">CCV</label>
+                                    <input type="text" id="inputCCV" name="ccv" placeholder="CCV" maxlength="3">
+                                    <p class="form-error">El cvv tiene que ser válido.</p>
+                                </div>
+                            </div>
+
+                            <div class="grupo tipo">
+                                <label for="">Tipo de método de pago</label>
+
+                                <!-- select box -->
+
+                                <div class="contenedor-select">
+                                    <div class="selectbox">
+                                        <div class="select" id="select">
+                                            <div class="contenido-select">
+                                                <h1 class="titulo">Selecciona tu método de pago.</h1>
+                                            </div>
+                                            <?xml version="1.0" encoding="iso-8859-1"?>
+                                            <!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+                                            <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+                                            <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="10.847px" height="10.847px" viewBox="0 0 451.847 551.847" style="enable-background:new 0 0 451.847 451.847;" xml:space="preserve">
+<g>
+<path d="M225.923,354.706c-8.098,0-16.195-3.092-22.369-9.263L9.27,151.157c-12.359-12.359-12.359-32.397,0-44.751
+    c12.354-12.354,32.388-12.354,44.748,0l171.905,171.915l171.906-171.909c12.359-12.354,32.391-12.354,44.744,0
+    c12.365,12.354,12.365,32.392,0,44.751L248.292,345.449C242.115,351.621,234.018,354.706,225.923,354.706z"/>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+</svg>
+                                        </div>
+
+                                        <div class="opciones" id="opciones">
+
+
+                                        </div>
+                                    </div>
+                                    <input type="hidden" name="tipo" id="inputSelect" value="">
+
+
+                                </div>
+
+                            </div>
+
+                            <div class="formulario-mensaje" id="formulario-mensaje">
+                                <p><i class="warning fa fa-exclamation-circle" aria-hidden="true"></i><b>Error : </b>Por favor revise los campos remarcados.</p>
+                            </div>
+
+
+                            <button type="submit" class="btn-enviar">Enviar</button>
+                        </form>
+                    </div>
+
+                    <!-- hasta aqui --------------------------------------------------------------------------------- -->
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script src="js/card-config/register-card-select.js"></script>
+    <script src="js/card-config/register-card-validaciones.js"></script>
+    <script src="js/card-config/register-card-main.js"></script>
+    <script src="js/helpers/singleton.js"></script>
+    <script src="js/header.js"></script>
+    <script src="js/dashboards/dashboard-dm.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,295 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400&display=swap');
+
+/* *{
+
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+ */
+
+:root {
+    --theme-bg-color: rgb(255 255 255 / 31%);
+    /* letras */
+    --theme-color: #3c3a3a;
+    --inactive-color: #333333;
+    --button-inactive: #3c3a3a;
+    --dropdown-bg: #f7f7f7;
+    --overlay-bg: rgb(255 255 255 / 30%);
+    --dropdown-hover: rgb(236 236 236);
+    --border-color: rgb(255 255 255 / 35%);
+    --hover-menu-bg: rgba(255 255 255 / 35%);
+    --linkHover: rgb(230, 230, 230);
+    --linkColor: #000;
+    --linkBg: #f7f7f7;
+    --linkShadow: rgba(0, 0, 0, 0.2);
+    --containerShadow: rgba(0, 0, 0, 0.3);
+    --containerBackground: rgba(255, 255, 255, 0.5);
+    --backgroundTheme: #fff;
+    ;
+}
+
+.section-listar-metodos {
+    min-height: 100vh;
+}
+
+.contenedor {
+    -webkit-backdrop-filter: blur(20px);
+    align-items: center;
+    backdrop-filter: blur(20px);
+    background-color: var(--theme-bg-color);
+    border-radius: 15px;
+    box-shadow: 2px 2px 1px var(--containerShadow), -1px -1px 1px var(--containerShadow);
+    display: flex;
+    flex-direction: column;
+    padding: 15px 0px;
+    /*  */
+    width: 800px;
+    z-index: 10;
+    margin-bottom: 30px;
+}
+
+.contenedor .header {
+    border-bottom: 1px solid var(--border-color);
+    position: relative;
+    text-align: center;
+    width: 100%;
+    min-height: 100px;
+}
+
+.contenedor .header h2 {
+    display: block;
+    margin: auto;
+}
+
+.contenedor .header .contenedor-icon {
+    backdrop-filter: blur(5px);
+    border-radius: 100%;
+    border: 1px solid var(--border-color);
+    height: 60px;
+    overflow: hidden;
+    overflow: hidden;
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    transition: 0.5s;
+    width: 60px;
+}
+
+.contenedor .header .contenedor-icon:before {
+    background: var(--containerBackground);
+    content: '';
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    transform: skewX(45deg) translateX(150px);
+    transition: 0.5s;
+    width: 50px;
+}
+
+.contenedor .header .contenedor-icon:hover::before {
+    transform: skewX(45deg) translateX(-150px);
+}
+
+.contenedor .caja-botones .contenedor-icon {
+    border-radius: 100%;
+    height: 50px;
+    left: 30px;
+    overflow: hidden;
+    position: absolute;
+    top: 6px;
+    width: 50px;
+}
+
+.contenedor .header .contenedor-icon:hover,
+.contenedor .caja-botones .contenedor-icon:hover {
+    background-color: var(--hover-menu-bg);
+}
+
+.contenedor .header .contenedor-icon img,
+.contenedor .caja-botones .contenedor-icon img {
+    height: 100%;
+    width: 60%;
+}
+
+.contenedor .header h2 {
+    color: var(--theme-color);
+    font-size: 24px;
+    font-weight: 500;
+    padding: 40px;
+}
+
+.contenedor-tarjeta {
+    height: 50vh;
+    overflow: auto;
+    position: relative;
+    width: 100%;
+}
+
+.contenedor-tarjeta .tarjeta {
+    border-bottom: 1px solid grey;
+    display: flex;
+    padding: 30px;
+    position: relative;
+}
+
+.contenedor-tarjeta .tarjeta:nth-child(1) {
+    border-top: 1px solid grey;
+}
+
+.contenedor-tarjeta .tarjeta:hover {
+    background-color: var(--hover-menu-bg);
+}
+
+.contenedor-tarjeta .tarjeta .contenedor-img-tarjeta {
+    height: 50%;
+    top: 10px;
+    margin-right: 1.5em;
+    max-width: 100px;
+    position: relative;
+    width: 50%;
+}
+
+.contenedor-tarjeta .tarjeta .contenedor-img-tarjeta .cardImg {
+    height: 100%;
+    user-select: none;
+    width: 100%;
+}
+
+.contenedor-tarjeta .tarjeta .contenido h3 {
+    color: var(--theme-color);
+    margin-top: 22px;
+    margin-bottom: 10px;
+    user-select: none;
+    font-size: 20px;
+}
+
+.contenedor-tarjeta .tarjeta .contenido p {
+    color: var(--theme-color);
+    user-select: none;
+}
+
+.contenedor .caja-botones {
+    align-items: center;
+    border-top: 1px solid var(--border-color);
+    display: flex;
+    justify-content: center;
+    min-height: 50px;
+    position: relative;
+    text-align: center;
+    width: 100%;
+}
+
+.contenedor .caja-botones p {
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+.contenedorVacio {
+    margin: auto;
+    padding: 20% 0;
+    width: 100%;
+}
+
+.contenedorVacio p {
+    text-align: center;
+}
+
+.dropdown {
+    display: inline-block;
+    position: absolute;
+    right: 10px;
+    top: 5px;
+}
+
+.dropdown .btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    padding: 8px 16px;
+    transition: .3s;
+}
+
+.dropdown .btn .icon {
+    width: 20px;
+}
+
+.dropdown .links-box {
+    backdrop-filter: blur(20px);
+    background: var(--linkBg);
+    box-shadow: 0 4px 8px var(--linkShadow);
+    min-width: 100%;
+    opacity: 0;
+    position: absolute;
+    right: 10px;
+    top: 30px;
+    transition: .3s;
+    visibility: hidden;
+    z-index: 1;
+}
+
+.dropdown:hover .links-box {
+    opacity: 1;
+    visibility: visible;
+}
+
+.dropdown .links-box .link {
+    color: var(--linkColor);
+    display: block;
+    font-size: 14px;
+    padding: 10px 5px;
+    text-align: center;
+    text-decoration: none;
+    transition: .1s;
+    white-space: nowrap;
+}
+
+.dropdown .links-box .link:hover {
+    background-color: var(--linkHover);
+}
+
+@media (max-width:407px) {
+    .contenedor-tarjeta .tarjeta {
+        padding: 20px;
+    }
+    .contenedor-tarjeta .tarjeta .contenedor-img-tarjeta {
+        height: 50%;
+        min-width: 100px;
+        position: relative;
+        width: 50%;
+    }
+    .contenedor .header .contenedor-icon {
+        height: 45px;
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        width: 45px;
+    }
+}
+
+@media (max-width:474px) {
+    .contenedor {
+        margin-top: px;
+    }
+    .contenedor .header .contenedor-icon {
+        height: 40px;
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        width: 40px;
+    }
+}
+
+@media screen and (min-width: 621px) and (max-width: 1179px) {
+    .contenedor {
+        margin-top: 20px;
+    }
+}
+
+@media(min-width:1179px) {
+    .contenedor {
+        margin-top: 20px;
+    }
+}

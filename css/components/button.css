@@ -1,0 +1,18 @@
+.primary-button {
+  background-color: var(--green);
+  border-radius: 5px;
+  border: 2px solid var(--green);
+  color: #000;
+  font-family: var(--primary-font);
+  height: 50px;
+  padding: 10px 0;
+  transition: 0.5s;
+  width: 30%;
+}
+
+.primary-button:hover,
+.primary-button:active {
+	background-color: #fff;
+	box-shadow: 0 6px 6px 0 var(--shadow);
+	transition: 0.5s;
+}
